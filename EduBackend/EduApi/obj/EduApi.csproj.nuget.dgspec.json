@@ -1,0 +1,213 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduApi\\EduApi.csproj": {}
+  },
+  "projects": {
+    "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduApi\\EduApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduApi\\EduApi.csproj",
+        "projectName": "EduApi",
+        "projectPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduApi\\EduApi.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\EduCore.csproj": {
+                "projectPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\EduCore.csproj"
+              },
+              "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduInfrastructure\\EduInfrastructure.csproj": {
+                "projectPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduInfrastructure\\EduInfrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\EduCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\EduCore.csproj",
+        "projectName": "EduCore",
+        "projectPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\EduCore.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduInfrastructure\\EduInfrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduInfrastructure\\EduInfrastructure.csproj",
+        "projectName": "EduInfrastructure",
+        "projectPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduInfrastructure\\EduInfrastructure.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduInfrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\EduCore.csproj": {
+                "projectPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\EduCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
