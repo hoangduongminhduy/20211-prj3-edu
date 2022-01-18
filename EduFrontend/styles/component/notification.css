@@ -1,0 +1,24 @@
+.title-note {
+    width: 100%;
+    border: solid 4px blanchedalmond;
+}
+
+.title-note .title {
+    font-size: larger;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: red;
+}
+
+.title-note .note-time {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-style: italic;
+}
+
+.title-note .content-note {}
+
+table {
+    overflow: auto;
+    height: 80px;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GV - Chi tiết giảng viên</title>
+
+		<link rel="stylesheet" href="../../styles/teacher/detail.css" />
+		<link rel="stylesheet" href="../../styles/common/main.css" />
+		<link rel="stylesheet" href="../../styles/component/button.css" />
+		<link rel="stylesheet" href="../../styles/component/dialog.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="title">
+				<div class="info">
+					<div class="logo-hust"></div>
+					<div class="web-title">Hệ thống quản lý học tập</div>
+				</div>
+				<div class="accessibility">
+					<div class="profile">
+						<div class="icon icon-facebook"></div>
+						<div class="icon icon-gmail"></div>
+						<div class="icon-avatar"></div>
+					</div>
+					<div class="week-display">
+						Tuần&nbsp;<span id="week">8</span> (Tuần học
+						thứ&nbsp;<span id="learning-week">7</span>):&nbsp;<span
+							id="period"
+							>15/11 - 20/11</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="sidebar">
+        <button class="sidebar-item white" onclick="location.href = `schedule-page.html`">
+          <img src="../../assets/images/logo-vscode.png" alt="" />
+          Lịch dạy
+        </button>
+        <button class="sidebar-item blue" onclick="location.href = `detail-page.html`">
+          <img src="../../assets/images/logo-vscode.png" alt="" />
+          Chi tiết giáo viên
+        </button>
+        <button class="sidebar-item white" onclick="location.href = `send-notification.html`">
+          <img src="../../assets/images/logo-vscode.png" alt="" />
+          Gửi thông báo
+        </button>
+        </button>
+        <button class="sidebar-item white" onclick="location.href = `notification-page.html`">
+          <img src="../../assets/images/logo-vscode.png" alt="" />
+          Xem thông báo
+        </button>
+			</div>
+
+			<div class="content" style="margin-left: 35px; margin-top: 35px">
+				<div class="wrapper">
+					<div class="left">
+						<img
+							src="https://soict.hust.edu.vn/content/uploads/2019/06/balam.png"
+							alt="teacher-image"
+						/>
+						<h2 id="teacher-name"></h2>
+						<br />
+						<h4 id="teacher-position"></h4>
+					</div>
+					<div class="right">
+						<div class="align-right">
+							<button class="green" id="button-edit">
+								Chỉnh sửa
+							</button>
+						</div>
+						<div class="info">
+							<h2>Giới thiệu</h2>
+							<div class="info_data" id="teacher-brief"></div>
+						</div>
+						<div class="info">
+							<h2>Thông tin cá nhân</h2>
+							<div class="info_data">
+								<div class="data">
+									<h3>Ngày sinh</h3>
+									<h4 id="teacher-birthday"></h4>
+								</div>
+								<div class="data">
+									<h3>Giới tính</h3>
+									<h4 id="teacher-gender"></h4>
+								</div>
+							</div>
+						</div>
+
+						<div class="projects">
+							<h2>Liên hệ</h2>
+							<div class="projects_data">
+								<div class="data">
+									<h3>Email</h3>
+									<a href="#" id="teacher-email"></a>
+								</div>
+								<div class="data">
+									<h3>Số điện thoại</h3>
+									<a href="#" id="teacher-phone-number"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="m-dialog" style="display: none" id="detail-form">
+			<div class="m-dialog-modal"></div>
+			<div class="m-dialog-box">
+				<div class="m-dialog-header">
+					<div
+						class="square-btn close-btn white"
+						id="button-close"
+					></div>
+				</div>
+				<div class="m-dialog-content">
+					<div class="right">
+						<div class="info">
+							<h2>Giới thiệu</h2>
+							<textarea
+								id="form-brief"
+								cols="75"
+								rows="10"
+							></textarea>
+						</div>
+						<div class="info">
+							<h2>Thông tin cá nhân</h2>
+							<div class="info_data">
+								<div class="data">
+									<h3>Ngày sinh</h3>
+									<input type="date" id="form-birthday" />
+								</div>
+								<div class="data">
+									<h3>Giới tính</h3>
+									<select id="form-gender">
+										<option value="M">Nam</option>
+										<option value="F">Nữ</option>
+										<option value="">Khác</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="projects">
+							<h2>Liên hệ</h2>
+							<div class="projects_data">
+								<div class="data">
+									<h3>Email</h3>
+									<input type="text" id="form-email" />
+								</div>
+								<div class="data">
+									<h3>Số điện thoại</h3>
+									<input type="text" id="form-phone-number" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="m-dialog-footer">
+					<button
+						class="rectangle-btn grey"
+						style="margin-right: 16px"
+						id="button-cancel"
+					>
+						Hủy
+					</button>
+					<button class="rectangle-btn green" id="button-save">
+						Lưu
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="footer"></div>
+		<script src="../../scripts/teacher/DetailPage.js"></script>
+	</body>
+</html>

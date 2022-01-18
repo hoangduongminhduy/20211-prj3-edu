@@ -1,0 +1,72 @@
+@import url("../../styles/component/scrollbar.css");
+@import url("../../styles/component/button.css");
+
+
+.m-dialog {
+	display:none;
+	position: absolute;
+	left:0; right:0; top:0; bottom:0;
+	z-index: 50;
+}
+	.m-dialog .m-dialog-modal {
+		position:absolute;
+		left:0; right:0; top:0; bottom:0;
+		background-color:black;
+		opacity:.4;
+	}
+	.m-dialog .m-dialog-box{
+		position:absolute;
+		top:50%; left:50%;
+		transform: translate(-50%, -50%);
+		height:500px;
+		width: 694px;
+		background-color:white;
+		border-radius:4px;
+		display: flex;
+		flex-direction: column;
+	}
+		.m-dialog-box .m-dialog-header{
+			padding-left:24px; 
+			display:flex;
+			box-sizing: border-box;
+			height: 50px;
+		}
+			.m-dialog-header .m-dialog-title{
+				font-size:24px;  
+				text-transform:uppercase;
+				font-weight:500;
+				color:#000;
+				line-height: 50px;
+			}	
+			.m-dialog-header .close-btn{
+				position:absolute; 
+				top:0px; right:0px;
+				border-radius:0 4px 0 4px;
+				background-image: url('../../assets/icons/x.svg');
+				background-repeat:no-repeat;
+				background-size:50% 50%	;
+				background-position:center center;
+			}
+			
+		.m-dialog-box .m-dialog-content{
+			height: calc(100% - 56px - 50px);
+			box-sizing: border-box;
+			padding: 24px 0px 0px 24px;
+			width:100%;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: row;
+		}
+			
+
+		.m-dialog-box .m-dialog-footer{
+			height:56px;
+			border-radius:0 0 4px 4px;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
+			padding-right: 24px;
+			display: flex;
+			align-content: center;
+			justify-content: flex-end;
+		}

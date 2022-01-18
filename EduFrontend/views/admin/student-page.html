@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PĐT - Quản lý sinh viên</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">
+            <div class="info">
+                <div class="logo-hust"></div>
+                <div class="web-title">Hệ thống quản lý học tập</div>
+            </div>
+            <div class="accessibility">
+                <div class="profile">
+                    <div class="icon icon-facebook"></div>
+                    <div class="icon icon-gmail"></div>
+                    <div class="icon-avatar"></div>
+                </div>
+                <div class="week-display">
+                    Tuần&nbsp;<span id="week">8</span> (Tuần học thứ&nbsp;<span id="learning-week">7</span>):&nbsp;<span id="period">15/11 - 20/11</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <button class="sidebar-item white" onclick="location.href = `class-page.html`">
+                <img src="../../assets/images/logo-vscode.png" alt="" />
+                Quản lý lớp học
+            </button>
+            <button class="sidebar-item white" onclick="location.href = `teacher-page.html`">
+                <img src="../../assets/images/logo-vscode.png" alt="" />
+                Quản lý giáo viên
+            </button>
+            <button class="sidebar-item blue" onclick="location.href = `student-page.html`">
+                    <img src="../../assets/images/logo-vscode.png" alt="" />
+                    Quản lý sinh viên
+                </button>
+            <button class="sidebar-item white" onclick="location.href = `studentclass-page.html`">
+                    <img src="../../assets/images/logo-vscode.png" alt="" />
+                    Quản lý lớp sinh viên
+                </button>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <button class="rectangle-btn green" id="add-student-btn">Thêm sinh viên
+                    </button>
+                </div>
+            </div>
+            <br />
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th colspan="1" rowspan="1" class="align-center" fieldName="">STT</th>
+                        <th colspan="1" rowspan="1" class="align-center" fieldName="">Mã số sinh viên</th>
+                        <th colspan="1" rowspan="1" class="align-center" fieldName="">Tên sinh viên</th>
+                        <th colspan="1" rowspan="1" class="align-center" fieldName="">Giới Tính</th>
+                        <th colspan="1" rowspan="1" class="align-center" fieldName="">Số điện thoại</th>
+                        <th colspan="1" rowspan="1" class="align-center" fieldName="">Email</th>
+                    </tr>
+                </thead>
+                <tbody id="table-content">
+                </tbody>
+            </table>
+            <br />
+            <div class="align-center">
+                <div id="pagination" class="pagination">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-edit-student" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" style="width: 50%;">
+            <div class="modal-header">
+                <span id="close-edit-student" class="close">&times;</span>
+                <h2>Chỉnh sửa thông tin sinh viên</h2>
+            </div>
+            <div class="modal-body">
+                <form id="edit-student-form">
+                    <input id="edit-guid" type="hidden" name="guid" value="" />
+                    <div class="row" style="justify-content: center;">
+                        <div class="col-6" style="margin: 20px auto 20px auto;">
+                            <label for="edit-studentID">Mã số sinh viên</label>
+                            <input id="edit-studentID" type="text" name="studentID" value=""
+                                style="width: 100%; height: 40px;" />
+                            <span id="error-message" style="color: red;"></span>
+                        </div>
+                        <div class="col-6" style="margin: 20px auto 20px auto;">
+                            <label for="edit-fullName">Tên sinh viên</label>
+                            <input id="edit-fullName" type="text" name="fullName" value=""
+                                style="width: 100%; height: 40px;" />
+                            <span id="error-message" style="color: red;"></span>
+                        </div>
+                        <div class="col-2" style="margin: 20px auto 20px auto;">
+                            <label for="edit-gender">Giới tính</label>
+                            <select id="edit-gender" name="gender"
+                                    style="width: 100%; height: 40px;" >
+                                <option value="M">Nam</option>
+                                <option value="F">Nữ</option>                            
+                            </select>    
+                            <span id="error-message" style="color: red;"></span>
+                        </div>
+                        <div class="col-5" style="margin: 20px auto 20px auto;">
+                            <label for="edit-phoneNumber">Số điện thoại</label>
+                            <input id="edit-phoneNumber" type="text" name="phoneNumber" value=""
+                                style="width: 100%; height: 40px;" />
+                            <span id="error-message" style="color: red;"></span>
+                        </div>
+                        <div class="col-5" style="margin: 20px auto 20px auto;">
+                            <label for="edit-email">Email</label>
+                            <input id="edit-email" type="text" name="email" value=""
+                                style="width: 100%; height: 40px;" />
+                            <span id="error-message" style="color: red;"></span>
+                        </div>                        
+
+                        <input class="rectangle-btn green" type="submit" value="Chỉnh sửa thông tin sinh viên"
+                            style="width: 100%; height: 40px;" />
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="modals"></div>
+
+    <div id="modal-add-student" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" style="width: 50%;">
+            <div class="modal-header">
+                <span id="close-add-student" class="close">&times;</span>
+                <h2>Thêm sinh viên</h2>
+            </div>
+            <div class="modal-body">
+                <form id="add-student-form">
+                    <input id="add-guid" type="hidden" name="guid" value="" />
+                    <div class="row" style="justify-content: center;">
+                        <div class="col-6" style="margin: 20px auto 20px auto;">
+                            <label for="add-studentID">Mã số sinh viên</label>
+                            <input id="add-studentID" type="text" name="studentID" value=""
+                                style="width: 100%; height: 40px;" />
+                            <span id="error-message" style="color: red;"></span>
+                        </div>
+                        <div class="col-6" style="margin: 20px auto 20px auto;">
+                            <label for="add-fullName">Tên sinh viên</label>
+                            <input id="add-fullName" type="text" name="fullName" value=""
+                                style="width: 100%; height: 40px;" />
+                            <span id="error-message" style="color: red;"></span>
+                        </div>
+                        <div class="col-2" style="margin: 20px auto 20px auto;">
+                            <label for="add-gender">Giới tính</label>
+                            <select id="add-gender" name="gender"
+                                     style="width: 100%; height: 40px;" >
+                                <option value="M">Nam</option>
+                                <option value="F">Nữ</option>                            
+                            </select>  
+                            <span id="error-message" style="color: red;"></span>
+                        </div>
+                        <div class="col-5" style="margin: 20px auto 20px auto;">
+                            <label for="add-phoneNumber">Số điện thoại</label>
+                            <input id="add-phoneNumber" type="text" name="phoneNumber" value=""
+                                style="width: 100%; height: 40px;" />
+                            <span id="error-message" style="color: red;"></span>
+                        </div>
+                        <div class="col-5" style="margin: 20px auto 20px auto;">
+                            <label for="add-email">Email</label>
+                            <input id="add-email" type="text" name="email" value=""
+                                style="width: 100%; height: 40px;" />
+                            <span id="error-message" style="color: red;"></span>
+                        </div>                        
+
+                        <input class="rectangle-btn green" type="submit" value="Thêm sinh viên"
+                            style="width: 100%; height: 40px;" />
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    @import url('../../styles/admin/page.css');
+    @import url('../../styles/admin/components/modal.css');
+    @import url('../../styles//admin/components/pagination.css');
+</style>
+<script type="module" src="../../scripts/admin/scripts.js"></script>
+<script type="module" src="../../scripts/admin/student-page.js"></script>
+<script type="module" src="../../scripts/admin/modal.js"></script>

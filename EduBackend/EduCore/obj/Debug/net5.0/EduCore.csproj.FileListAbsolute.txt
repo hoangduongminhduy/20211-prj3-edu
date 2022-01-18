@@ -1,0 +1,12 @@
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\bin\Debug\net5.0\EduCore.deps.json
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\bin\Debug\net5.0\EduCore.dll
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\bin\Debug\net5.0\ref\EduCore.dll
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\bin\Debug\net5.0\EduCore.pdb
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\obj\Debug\net5.0\EduCore.csproj.AssemblyReference.cache
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\obj\Debug\net5.0\EduCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\obj\Debug\net5.0\EduCore.AssemblyInfoInputs.cache
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\obj\Debug\net5.0\EduCore.AssemblyInfo.cs
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\obj\Debug\net5.0\EduCore.csproj.CoreCompileInputs.cache
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\obj\Debug\net5.0\EduCore.dll
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\obj\Debug\net5.0\ref\EduCore.dll
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduCore\obj\Debug\net5.0\EduCore.pdb

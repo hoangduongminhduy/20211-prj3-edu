@@ -1,0 +1,57 @@
+.blue,.green,.red{
+    color: white;
+}
+
+.grey,.white{
+    color: black;
+}
+
+.blue{
+    background-color: #337EFF;
+}
+.blue:hover{
+    background-color: #80AEFF;
+}
+.blue:active, .blue:focus{
+    background-color: #5c97ff;
+}
+
+.green{
+    background-color: #11ad78;
+}
+.green:hover{
+    background-color: #4dc99f;
+}
+.green:active, .green:focus{
+    background-color: #16ba84;
+}
+
+.red{
+    background-color: #E81717;
+}
+.red:hover{
+    background-color: #EF5D5D;
+}
+.red:active, .red:focus{
+    background-color: #f25555;
+}
+
+.grey{
+    background-color: #BBBBBB;
+}
+.grey:hover{
+    background-color: #dadada;
+}
+.grey:active, .grey:focus{
+    background-color: #b1b1b1;
+}
+
+.white{
+    background-color: white;
+}
+.white:hover{
+    background-color: #E5E5E5;
+}
+.white:active, .white:focus{
+    background-color: #D2D2D2;
+}

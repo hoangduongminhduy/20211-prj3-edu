@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SV - Lịch học</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">
+            <div class="info">
+                <div class="logo-hust"></div>
+                <div class="web-title">Hệ thống quản lý học tập</div>
+            </div>
+            <div class="accessibility">
+                <div class="profile">
+                    <div class="icon icon-facebook"></div>
+                    <div class="icon icon-gmail"></div>
+                    <div class="icon-avatar"></div>
+                </div>
+                <div class="week-display">
+                    Tuần&nbsp;<span id="week">8</span> (Tuần học thứ&nbsp;<span id="learning-week">7</span
+            >):&nbsp;<span id="period">15/11 - 20/11</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="sidebar">
+            <button class="sidebar-item blue" onclick="location.href = `schedule-page.html`">
+          <!-- <img src="../../assets/images/logo-vscode.png" alt="" /> -->
+          Lịch học
+        </button>
+            <button class="sidebar-item white" onclick="location.href = `transcript-page.html`">
+          <!-- <img src="../../assets/images/logo-vscode.png" alt="" /> -->
+          Bảng điểm
+        </button>
+            <button class="sidebar-item white" onclick="location.href = `notification-page.html`">
+          <!-- <img src="../../assets/images/logo-vscode.png" alt="" /> -->
+          Thông báo
+        </button>
+        </div>
+
+        <div class="content" style="margin-left: 35px; margin-top: 35px;">
+            <div class="toolbar" style="margin-bottom: 15px;">
+                <div>Kỳ học</div>
+                <select>
+                    <option>20181</option>
+                    <option>20182</option>
+                    <option>20191</option>
+                    <option>20192</option>
+                </select>
+                <input placeholder="Tìm kiếm" />
+            </div>
+
+            <div class="table-wrapper" style="width: 90%;">
+                <table keyId="ScheduleId" cellspacing="0" cellpadding="0" style="min-width: 100%">
+                    <thead>
+                        <tr>
+                            <th colspan="1" rowspan="1" class="align-left" fieldName="">Mã lớp học</th>
+                            <th colspan="1" rowspan="1" class="align-left" fieldName="">Mã học phần</th>
+                            <th colspan="1" rowspan="1" class="align-left" fieldName="">Tên học phần</th>
+                            <th colspan="1" rowspan="1" class="align-left" fieldName="">Phòng học</th>
+                            <th colspan="1" rowspan="1" class="align-left" fieldName="">Lịch học</th>
+                            <!-- <th colspan="1" rowspan="1" class="align-left" fieldName="">Giảng viên</th> -->
+                            <!-- <th class="gutter" style="width: 1px"></th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="student-she">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer"></div>
+
+
+    <!--DIALOG AREAS-->
+    <div class="m-dialog">
+        <div class="m-dialog-modal"></div>
+        <div class="m-dialog-box">
+            <div class="m-dialog-header">
+                <div class="m-dialog-title">XIN PHÉP NGHỈ HỌC</div>
+                <div onclick="closeDialog()" class="square-btn close-btn white"></div>
+            </div>
+            <div class="m-dialog-content">
+                <div>Tiêu đề</div>
+                <input id='m-title' readonly title="Không được sửa trường này"/><br><br>
+                <div>Mã lớp</div>
+                <input id='m-classId' readonly title="Không được sửa trường này"/><br><br>
+                <div>Thông tin lớp</div>
+                <textarea id='m-info' big-input title="Không được sửa trường này"></textarea><br><br>
+                <div>Lời nhắn</div>
+                <textarea id='m-message'></textarea><br><br>
+                <small><i>Thời gian gửi đơn sẽ tự cập nhật khi bấm gửi</i></small>
+            </div>
+            <div class="m-dialog-footer">
+                <button onclick="closeDialog()" class="rectangle-btn grey" style="margin-right: 16px;">Hủy</button>
+                <button onclick="sendNotifi()" class="rectangle-btn green">Gửi</button>
+            </div>
+        </div>
+</body>
+
+</html>
+
+<style>
+    @import url('../../styles/student/page.css');
+    @import url('../../styles/student/schedule-page.css');
+</style>
+<script src="../../scripts/student/page/SchedulePage.js"></script>

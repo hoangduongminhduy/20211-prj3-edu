@@ -1,0 +1,22 @@
+@import url('../component/table.css');
+@import url('../component/dialog.css');
+
+.m-dialog-box{
+    width: 500px !important;
+    height: 550px !important;
+}
+.m-dialog-content{
+    display:block !important;
+}
+.m-dialog-content input{
+    width: 300px !important;
+}
+.m-dialog-content textarea{
+    width: 300px !important;
+    height: 62px !important;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}

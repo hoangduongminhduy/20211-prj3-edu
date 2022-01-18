@@ -1,0 +1,59 @@
+.table-wrapper {
+    height: calc(100vh - 220px);
+    overflow: auto;
+}
+    .table-wrapper table{
+        background-color: #fff;
+        border: 1px solid #bbb;
+        border-bottom: none;
+    }
+
+    .table-wrapper thead {            /* Thay bằng th sẽ ra hiệu ứng quái dị cho table head khi scroll ngang*/
+        position:sticky;              /* th không bị scroll đi là nhờ cái này :) */
+        background-color: #fff;  /* thực chất tbody bị cuộn lên nhưng cái này làm nó bị che đi :) */
+        z-index:1; top:0; left:0;
+        font-weight: bold !important;
+    }
+    /* .table-wrapper .table-wrapper-header {
+        height: 48px;
+    } */
+    /* .table-wrapper .table-wrapper-content, .tablescroll_wrapper, .tablescroll {
+        height: calc(100% - 25px);
+    } */
+
+    .table-wrapper tbody tr:hover {
+        background-color: #D7F4EC;
+        cursor: pointer;
+    }
+    .table-wrapper tr.selected{
+        background-color: #F9ECD2 !important;
+    }
+    /* .table-wrapper tr:nth-child(odd) {
+        background-color: #e5e5e5;
+    } */
+
+
+        .table-wrapper td, .table-wrapper th{
+            border-bottom: 1px solid #C5C9D3;
+            height: 42px !important;
+            box-sizing: border-box;
+            padding-left:5px;
+            padding-right:5px;
+        }
+        .table-wrapper th{   
+            white-space: nowrap; /* Bộ 3 chống tràn */
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            background-color: #F0F2F4;
+        }        
+        .table-wrapper td {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /* phần ẩn đi được thay thế bằng ...*/
+            word-break: break-word;
+        }
+        /* .table-wrapper table td span {
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            white-space: nowrap;
+        } */

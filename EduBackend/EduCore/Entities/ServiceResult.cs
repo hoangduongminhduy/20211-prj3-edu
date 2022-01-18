@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CukcukCore.Entities
+namespace EduCore.Entities
 {
 	public class ServiceResult
 	{
@@ -17,19 +17,18 @@ namespace CukcukCore.Entities
 		public string moreInfo { get; set; } = "google.com";
 		public object data { get; set; } = null;
 
-		public void setField(bool _success, string _devMsg, object _data)
+		public void setField(bool _success, string _userMsg, object _data)
 		{
 			success = _success;
 			if (success)
 			{
 				userMsg = "Success proccessing";
 				errorCode = "000";
-			} else
-			{
-				userMsg = "Error occured. Please contact MISA.";
-				errorCode = "MF965";
 			}
-			devMsg = _devMsg;
+			else
+			{
+				userMsg = _userMsg;
+			}
 			data = _data;
 		}
 	}

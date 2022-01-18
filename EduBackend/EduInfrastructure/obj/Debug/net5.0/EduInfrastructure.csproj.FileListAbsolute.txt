@@ -1,0 +1,15 @@
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\bin\Debug\net5.0\EduInfrastructure.deps.json
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\bin\Debug\net5.0\EduInfrastructure.dll
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\bin\Debug\net5.0\ref\EduInfrastructure.dll
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\bin\Debug\net5.0\EduInfrastructure.pdb
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\bin\Debug\net5.0\EduCore.dll
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\bin\Debug\net5.0\EduCore.pdb
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\obj\Debug\net5.0\EduInfrastructure.csproj.AssemblyReference.cache
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\obj\Debug\net5.0\EduInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\obj\Debug\net5.0\EduInfrastructure.AssemblyInfoInputs.cache
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\obj\Debug\net5.0\EduInfrastructure.AssemblyInfo.cs
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\obj\Debug\net5.0\EduInfrastructure.csproj.CoreCompileInputs.cache
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\obj\Debug\net5.0\EduInfrastructure.csproj.CopyComplete
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\obj\Debug\net5.0\EduInfrastructure.dll
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\obj\Debug\net5.0\ref\EduInfrastructure.dll
+D:\3HOCTAP\20211\CNWDVTT\edu\Final\EduBackend\EduInfrastructure\obj\Debug\net5.0\EduInfrastructure.pdb

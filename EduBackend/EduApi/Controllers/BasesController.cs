@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 
-using CukcukCore.Entities;
-using CukcukCore.Interfaces.BusinessServices;
+using EduCore.Entities;
+using EduCore.Interfaces.Services;
 using System.Collections.Generic;
 
-namespace CukcukApi.Controllers
+namespace EduApi.Controllers
 {
 	/**
 	 * Một API được phân biệt qua: 
@@ -49,12 +49,13 @@ namespace CukcukApi.Controllers
 			response = new ServiceResult();
 		}
 
+        public BasesController(ISubjectService mSubjectService)
+        {
+        }
 
-		#region GET POST PUT DELETE PROTOCOL
-		/// <summary>
-		/// Get all customers
-		/// </summary>
-		[HttpGet]
+
+        #region GET POST PUT DELETE PROTOCOL
+        [HttpGet]
 		public IActionResult Get()
 		{
 			try
@@ -68,9 +69,6 @@ namespace CukcukApi.Controllers
 			};
 		}
 
-		/// <summary>
-		/// Get customer by id
-		/// </summary>
 		[HttpGet("{EntityId}")] 
 		public IActionResult GetById(Guid EntityId)
 		{
@@ -86,23 +84,7 @@ namespace CukcukApi.Controllers
 		}
 
 		/// <summary>
-		/// Get customers by filter props
-		/// </summary>
-		[HttpGet("filter")]
-		public IActionResult GetByLocdulieu([FromQuery] string FulllName, int EntityGroupId)
-		{
-			try
-			{
-				return StatusCode(200, response.data);
-			} catch(Exception ex)
-			{
-				return HandleException(ex);
-			}
-		}
-
-
-		/// <summary>
-		/// Insert new customer to database
+		/// Insert new entity to database
 		/// </summary>
 		/// <approach>
 		/// 1. Use store procedure to make code shorter
@@ -125,9 +107,6 @@ namespace CukcukApi.Controllers
 		}
 
 
-		/// <summary>
-		/// Update a customer's infomation
-		/// </summary>
 		[HttpPut("{EntityId}")]
 		public IActionResult Put(Guid EntityId, [FromBody] Entity entity)
 		{
@@ -143,10 +122,7 @@ namespace CukcukApi.Controllers
 			}
 		}
 
-		/// <summary>
-		/// Delete a customer by id
-		/// </summary>
-		/// <returns></returns>
+
 		[HttpDelete("{EntityId}")]
 		public IActionResult Delete(Guid EntityId) {
 			try
@@ -162,13 +138,13 @@ namespace CukcukApi.Controllers
 		}
 		#endregion
 
+
 		#region Additional methods
-		private IActionResult HandleException(Exception ex)
+		protected IActionResult HandleException(Exception ex)
 		{
 			response.setField(false, ex.Message, null);
 			return StatusCode(500, response);
 		}
 		#endregion
 	}
-
 }

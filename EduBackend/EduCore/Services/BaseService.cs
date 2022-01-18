@@ -1,15 +1,15 @@
-﻿using System;
+﻿	using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 using System.Text.RegularExpressions;
-using CukcukCore.Interfaces.BusinessServices;
-using CukcukCore.Interfaces.Repositories;
-using CukcukCore.Entities;
+using EduCore.Interfaces.Services;
+using EduCore.Interfaces.Repositories;
+using EduCore.Entities;
 
-namespace CukcukCore.BusinessServices
+namespace EduCore.Services
 {
 	public class BaseService<Entity> : IBaseService<Entity>
 	{
@@ -45,7 +45,7 @@ namespace CukcukCore.BusinessServices
 			// 0. Assign new id to entity
 			SetId(entity, Guid.NewGuid()); 
 			// 1. Validate data: 
-			string errorInfo = ValidateData(entity);
+			string errorInfo = null; // ValidateData(entity);
 			if (errorInfo != null)
 			{
 				result.setField(false, errorInfo, null);
@@ -65,7 +65,7 @@ namespace CukcukCore.BusinessServices
 			// 0. Assign id to entity
 			SetId(entity, EntityId);
 			// 1. Validate data: 
-			string errorInfo = ValidateData(entity);
+			string errorInfo = null; //ValidateData(entity);
 			if (errorInfo != null)
 			{
 				result.setField(false, errorInfo, null);
@@ -99,53 +99,9 @@ namespace CukcukCore.BusinessServices
 		#endregion
 
 		#region Additional methods
-		public virtual string ValidateData(Entity entity)
-		{
-			// 0. Normalize entity name field
-			normalizeEntityName(entity);
-			// 1. Check required fields
-			var requiredFields = entity.GetType().GetProperties();
-			foreach (var prop in requiredFields)
-			{
-				var propName = prop.Name;
-				var propValue = prop.GetValue(entity);
-				var propType = prop.PropertyType;
-				
-				var requiredAttributes = prop.GetCustomAttributes(typeof(RequiredField), false);
-				if (requiredAttributes.Length > 0)
-				{
-					if(propValue==null)
-						return (requiredAttributes[0] as RequiredField).ErrorMsg;
-					if (propType == typeof(string) && (string.IsNullOrEmpty(propValue.ToString())))
-						return (requiredAttributes[0] as RequiredField).ErrorMsg;
-				}
-			}
-			// 2a. Check duplicate entity code
-			var code = entity.GetType().GetProperty($"{tableName}Code").GetValue(entity);
-			if (code != null) { 			
-				if(baseRepository.checkDuplicateCode(code.ToString()))
-				return "Duplicate code!!";
-			}
-			// 3a. Check entity code format
-			string errorMsg = checkEntityCodeFormat(entity);
-			if ( ! string.IsNullOrEmpty(errorMsg)) return errorMsg;
-			// 3b. Check entity email format if exist
-			var email = entity.GetType().GetProperty("Email").GetValue(entity);
-			if(email != null) {
-				var emailString = email.ToString();
-				if (!string.IsNullOrEmpty(emailString)) { 
-					if (!Regex.IsMatch(emailString, "/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9_-]+.[a-zA-Z0-9_.-]+$/")) { 
-						return "Email format is wrong";
-					}
-				}
-			}
-			// Pass validation
-			return null;
+		public void SetId(Entity entity, Guid guid) {
+			entity.GetType().GetProperty("guid").SetValue(entity, guid, null);
 		}
-
-		public virtual void SetId(Entity entity, Guid id) {}
-		public virtual string checkEntityCodeFormat(Entity entity) { return null; }
-		public virtual void normalizeEntityName(Entity entity) { }
 		#endregion
 	}
 }

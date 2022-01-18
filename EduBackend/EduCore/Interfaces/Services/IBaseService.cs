@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CukcukCore.Entities;
-namespace CukcukCore.Interfaces.BusinessServices
+using EduCore.Entities;
+namespace EduCore.Interfaces.Services
 {
 	/// <summary>
 	/// Interface liệt kê các service phục vụ cho Api
@@ -19,20 +19,7 @@ namespace CukcukCore.Interfaces.BusinessServices
 		public ServiceResult Delete(Guid EntityId);
 
 		#region Additional methods
-		/// <check>
-		/// not null props: CustomerCode, FullName
-		/// duplicate Customercode 
-		/// format of some props (such as Email)
-		/// </check>
-		/// <returns>null if pass validation, otherwise return error information string</returns>
-		public string ValidateData(Entity entity);
-		public void SetId(Entity entity, Guid id);
-		/// <summary>
-		/// Check Code field format
-		/// </summary>
-		/// <returns>null if entity code is right format, otherwise notify users right Code format</returns>
-		public string checkEntityCodeFormat(Entity entity);
-		public void normalizeEntityName(Entity entity);
+		public void SetId(Entity entity, Guid guid);
 		#endregion
 	}
 }

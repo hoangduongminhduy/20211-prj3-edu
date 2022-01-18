@@ -1,0 +1,155 @@
+@import url('./color.css');
+@import url('./google-sans.css');
+@import url('../component/scrollbar.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: GoogleSans;
+}
+
+/* header part */
+.header {
+  width: 100%;
+  height: 120px;
+  background: url("../../assets/images/bg.png") no-repeat;
+  background-size: 100% 120px;
+}
+
+.header .title {
+  height: 100px;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title .info {
+  display: flex;
+  align-items: center;
+}
+
+.info .logo-hust {
+  width: 80px;
+  height: 80px;
+  background-image: url("../../assets/images/logo-hust.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info .web-title {
+  font-size: 50px;
+}
+
+.accessibility {
+  height: 100px;
+  margin-right: 100px;
+}
+
+.accessibility .profile {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile .icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.profile .icon-facebook {
+  background-image: url("../../assets/images/facebook.png");
+}
+
+.profile .icon-gmail {
+  background-image: url("../../assets/images/gmail.png");
+}
+
+.profile .icon-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("../../assets/images/icon-avatar.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.accessibility .week-display {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#week,
+#learning-week {
+  font-weight: bold;
+}
+
+#period {
+  text-decoration: underline;
+}
+
+/* MAIN PART */
+.main {
+  display: flex;
+  height: calc(100vh - 220px);
+}
+
+.main .sidebar {
+  width: 250px;
+  height: 100%;
+  border-right: 1px solid #bbb;
+}
+
+.sidebar .sidebar-item {
+  width: 100%;
+  height: 60px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+.sidebar-item img {
+  margin-right: 10px;
+}
+
+.main .content {
+  flex: 1;
+}
+
+.content .toolbar {
+  display: flex;
+}
+
+.toolbar * {
+  margin-right: 20px;
+}
+
+/* footer part */
+.footer {
+  height: 100px;
+  background-color: burlywood;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.align-center {
+
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right !important;
+}

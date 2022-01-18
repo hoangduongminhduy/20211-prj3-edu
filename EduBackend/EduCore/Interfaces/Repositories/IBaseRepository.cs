@@ -1,12 +1,12 @@
-﻿using CukcukCore.Entities;
-using CukcukCore.Interfaces.BusinessServices;
+﻿using EduCore.Entities;
+using EduCore.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 
-namespace CukcukCore.Interfaces.Repositories
+namespace EduCore.Interfaces.Repositories
 {
 	/// <summary>
-	/// Giao diện giao tiếp với MariaInfrastructure subsystem
+	/// Giao diện giao tiếp với Infrastructure subsystem
 	/// </summary>
 	public interface IBaseRepository<Entity>
 	{

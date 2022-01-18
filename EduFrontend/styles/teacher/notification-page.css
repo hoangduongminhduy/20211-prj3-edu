@@ -1,0 +1,12 @@
+.content {
+    padding-right: 50px;
+}
+
+.notification {
+    padding: 0 0 30px 0;
+}
+
+.sender-label, .title-label, .message-label {
+    font-size: 24px;
+    color: #0022FF;
+}

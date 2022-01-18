@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../../styles/authen/login.css" />
+  </head>
+  <body>
+    <div class="img-bg">
+      <img src="../../assets/images/image-hust.png" alt="Hình Ảnh Minh Họa" />
+    </div>
+    <div class="content">
+      <div id="form">
+        <h1>ĐĂNG NHẬP</h1>
+        <form action="">
+          <div class="input-form">
+            <span>ID người dùng</span>
+            <input type="text" id="userID" />
+          </div>
+          <div class="input-form">
+            <span>Mật khẩu</span>
+            <input type="password" id="password" />
+          </div>
+          <h3 class="role-label">Đăng nhập với tư cách:</h3>
+          <br />
+          <div class="role-select">
+            <div class="option">
+              <input type="radio" id="student" name="role" value="student" />
+              <label for="student">Sinh viên</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="teacher" name="role" value="teacher" />
+              <label for="teacher">Giảng viên</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="admin" name="role" value="admin" />
+              <label for="admin">Phòng đào tạo</label>
+            </div>
+          </div>
+          <div class="input-form">
+            <input id="submit-button" type="submit" value="Đăng Nhập" />
+          </div>
+          <div class="input-form"></div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="../../scripts/authen/login.js"></script>
+  </body>
+</html>

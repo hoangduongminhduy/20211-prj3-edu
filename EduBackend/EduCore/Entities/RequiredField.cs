@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CukcukCore.Entities
+namespace EduCore.Entities
 {
     /// <summary>
     /// Class attribute đánh dấu thông tin bắt buộc nhập

@@ -1,0 +1,79 @@
+.content .notification-field {
+    margin-bottom: 35px;
+}
+
+.semester #select-semester,
+.to #select-class {
+    width: calc(60% - 320px);
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+#select-semester optgroup, #select-class optgroup {
+    font-size: 16px;
+    border: 1px solid #000;
+}
+
+.notification-field h2 p {
+    width: 300px;
+    float: left;
+    top: 0;
+}
+
+.notification-title #notification-title,
+.notification-message #notification-message {
+    width: calc(90% - 320px);
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+.notification-message #notification-message {
+    height: 300px;
+    padding-top: 10px;
+}
+
+.content .action {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action button {
+    min-width: 150px;
+    padding: 0 20px;
+    height: 60px;
+    outline: none;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.action #confirm {
+    background-color: #11ad78;
+}
+
+.action #reset {
+    background-color: #E81717;
+}
+
+.action #confirm:active {
+    background-color: #16ba84;
+}
+
+.action #reset:active {
+    background-color: #f25555;
+}

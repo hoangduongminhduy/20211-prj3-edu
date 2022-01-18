@@ -442,11 +442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduApi\\EduApi.csproj",
+      "projectUniqueName": "D:\\3HOCTAP\\20211\\CNWDVTT\\edu\\Final\\EduBackend\\EduApi\\EduApi.csproj",
       "projectName": "EduApi",
-      "projectPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduApi\\EduApi.csproj",
+      "projectPath": "D:\\3HOCTAP\\20211\\CNWDVTT\\edu\\Final\\EduBackend\\EduApi\\EduApi.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduApi\\obj\\",
+      "outputPath": "D:\\3HOCTAP\\20211\\CNWDVTT\\edu\\Final\\EduBackend\\EduApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -466,11 +466,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\EduCore.csproj": {
-              "projectPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduCore\\EduCore.csproj"
+            "D:\\3HOCTAP\\20211\\CNWDVTT\\edu\\Final\\EduBackend\\EduCore\\EduCore.csproj": {
+              "projectPath": "D:\\3HOCTAP\\20211\\CNWDVTT\\edu\\Final\\EduBackend\\EduCore\\EduCore.csproj"
             },
-            "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduInfrastructure\\EduInfrastructure.csproj": {
-              "projectPath": "D:\\3HOCTAP\\20211\\web-technologies-20211-group15\\Final\\EduBackend\\EduInfrastructure\\EduInfrastructure.csproj"
+            "D:\\3HOCTAP\\20211\\CNWDVTT\\edu\\Final\\EduBackend\\EduInfrastructure\\EduInfrastructure.csproj": {
+              "projectPath": "D:\\3HOCTAP\\20211\\CNWDVTT\\edu\\Final\\EduBackend\\EduInfrastructure\\EduInfrastructure.csproj"
             }
           }
         }
@@ -508,7 +508,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

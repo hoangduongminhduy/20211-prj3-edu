@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GV - Lịch dạy</title>
+  <link rel="stylesheet" href="../../styles/common/main.css" />
+  <link rel="stylesheet" href="../../styles/component/table.css" />
+</head>
+
+<body>
+  <div class="header">
+    <div class="title">
+      <div class="info">
+        <div class="logo-hust"></div>
+        <div class="web-title">Hệ thống quản lý học tập</div>
+      </div>
+      <div class="accessibility">
+        <div class="profile">
+          <div class="icon icon-facebook"></div>
+          <div class="icon icon-gmail"></div>
+          <div class="icon-avatar"></div>
+        </div>
+        <div class="week-display">
+          Tuần&nbsp;<span id="week">8</span> (Tuần học thứ&nbsp;<span id="learning-week">7</span>):&nbsp;<span
+            id="period">15/11 - 20/11</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="sidebar">
+      <button class="sidebar-item blue" onclick="location.href = `schedule-page.html`">
+        <img src="../../assets/images/logo-vscode.png" alt="" />
+        Lịch dạy
+      </button>
+      <button class="sidebar-item white" onclick="location.href = `detail-page.html`">
+        <img src="../../assets/images/logo-vscode.png" alt="" />
+        Chi tiết giáo viên
+      </button>
+      <button class="sidebar-item white" onclick="location.href = `send-notification.html`">
+        <img src="../../assets/images/logo-vscode.png" alt="" />
+        Gửi thông báo
+      </button>
+      </button>
+      <button class="sidebar-item white" onclick="location.href = `notification-page.html`">
+        <img src="../../assets/images/logo-vscode.png" alt="" />
+        Xem thông báo
+      </button>
+    </div>
+
+    <div class="content" style="margin-left: 35px; margin-top: 35px">
+      <div class="toolbar" style="margin-bottom: 15px">
+        <select id="semester" onChange="updateSemester()">
+          <option value="20211">20211</option>
+          <option value="20202">20202</option>
+          <option value="20201">20201</option>
+        </select>
+        <i>(Click đúp vào dòng của bảng lịch dạy để xem thông tin chi tiết
+          lớp)</i>
+      </div>
+
+      <div class="table-wrapper" style="width: 90%">
+        <table keyId="ScheduleId" cellspacing="0" cellpadding="0" style="min-width: 100%">
+          <thead>
+            <tr>
+              <th colspan="1" rowspan="1" class="align-left" fieldName="">
+                Mã lớp học
+              </th>
+              <th colspan="1" rowspan="1" class="align-left" fieldName="">
+                Mã học phần
+              </th>
+              <th colspan="1" rowspan="1" class="align-left" fieldName="">
+                Tên học phần
+              </th>
+              <th colspan="1" rowspan="1" class="align-left" fieldName="">
+                Phòng học
+              </th>
+              <th colspan="1" rowspan="1" class="align-left" fieldName="">
+                Lịch học
+              </th>
+              <!-- <th class="gutter" style="width: 1px"></th> -->
+            </tr>
+          </thead>
+          <tbody id="schedule-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"></div>
+  <script type="text/javascript">
+
+
+  </script>
+  <script src="../../scripts/teacher/SchedulePage.js"></script>
+
+</body>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GV - Gửi thông báo</title>
+    <link rel="stylesheet" href="../../styles/teacher/send-notification.css" />
+    <link rel="stylesheet" href="../../styles/common/main.css" />
+    <link rel="stylesheet" href="../../styles/component/table.css" />
+    <link rel="stylesheet" href="../../styles/component/button.css" />
+    <link rel="stylesheet" href="../../styles/component/dialog.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="title">
+        <div class="info">
+          <div class="logo-hust"></div>
+          <div class="web-title">Hệ thống quản lý học tập</div>
+        </div>
+        <div class="accessibility">
+          <div class="profile">
+            <div class="icon icon-facebook"></div>
+            <div class="icon icon-gmail"></div>
+            <div class="icon-avatar"></div>
+          </div>
+          <div class="week-display">
+            Tuần&nbsp;<span id="week">8</span> (Tuần học thứ&nbsp;<span
+              id="learning-week"
+              >7</span
+            >):&nbsp;<span id="period">15/11 - 20/11</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="sidebar">
+        <button class="sidebar-item white" onclick="location.href = `schedule-page.html`">
+          <img src="../../assets/images/logo-vscode.png" alt="" />
+          Lịch dạy
+        </button>
+        <button class="sidebar-item white" onclick="location.href = `detail-page.html`">
+          <img src="../../assets/images/logo-vscode.png" alt="" />
+          Chi tiết giáo viên
+        </button>
+        <button class="sidebar-item blue" onclick="location.href = `send-notification.html`">
+          <img src="../../assets/images/logo-vscode.png" alt="" />
+          Gửi thông báo
+        </button>
+        </button>
+        <button class="sidebar-item white" onclick="location.href = `notification-page.html`">
+          <img src="../../assets/images/logo-vscode.png" alt="" />
+          Xem thông báo
+        </button>
+      </div>
+
+      <div class="content" style="margin-left: 35px; margin-top: 35px">
+        <div class="notification-field to">
+          <h2>
+            <p>Gửi đến:</p>
+            <select name="" id="select-class">
+              <optgroup></optgroup>
+            </select>
+          </h2>
+        </div>
+        <div class="notification-field notification-title">
+          <h2>
+            <p>Tiêu đề:</p>
+            <input type="text" id="notification-title" />
+          </h2>
+        </div>
+        <div class="notification-field notification-message">
+          <h2>
+            <p>Nội dung:</p>
+            <textarea rows="20" id="notification-message"></textarea>
+          </h2>
+        </div>
+        <div class="action">
+          <button id="reset">Đặt lại</button>
+          <button id="confirm">Gửi thông báo</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="../../scripts/teacher/SendNotificationPage.js"></script>
+  </body>
+</html>

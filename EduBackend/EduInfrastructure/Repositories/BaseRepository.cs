@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using Dapper;
 using MySqlConnector;
-using CukcukCore.Interfaces.Repositories;
+using EduCore.Interfaces.Repositories;
 
-namespace MariaInfrastructure.Repositories
+namespace EduInfrastructure.Repositories
 {
 	public class BaseRepository<Entity> : IBaseRepository<Entity>
 	{
@@ -30,9 +30,9 @@ namespace MariaInfrastructure.Repositories
 		}
 		public Entity GetById(Guid EntityId)
 		{
-			string sqlCmd = $"SELECT * FROM {tableName} WHERE {tableName}Id = @{tableName}Id";
+			string sqlCmd = $"SELECT * FROM {tableName} WHERE guid = @guid";
 			var dparams = new DynamicParameters();
-			dparams.Add($"@{tableName}Id", EntityId.ToString());
+			dparams.Add($"@guid", EntityId.ToString());
 			return conn.QueryFirstOrDefault<Entity>(sqlCmd, dparams);
 		}
 		
@@ -69,18 +69,18 @@ namespace MariaInfrastructure.Repositories
 				col_param += $"{propName}=@{propName},";
 
 				var propValue = prop.GetValue(entity);
-				dparams.Add($"@{propName},", propValue);
+				dparams.Add($"@{propName}", propValue);
 			}
 			col_param = col_param.Substring(0, col_param.Length - 1);
-			var sqlCmd = $"UPDATE {tableName} SET {col_param} WHERE {tableName}Id = @{tableName}Id";
+			var sqlCmd = $"UPDATE {tableName} SET {col_param} WHERE guid = @guid";
 			return conn.Execute(sqlCmd, dparams);
 		}
 
 		public int Delete(Guid EntityId)
 		{
-			string sqlCmd = $"DELETE FROM {tableName} WHERE {tableName}Id = @{tableName}Id";
+			string sqlCmd = $"DELETE FROM {tableName} WHERE guid = @guid";
 			DynamicParameters dparams = new();
-			dparams.Add($"@{tableName}Id", EntityId);
+			dparams.Add($"@guid", EntityId);
 			return conn.Execute(sqlCmd, dparams);
 		}
 
@@ -88,9 +88,9 @@ namespace MariaInfrastructure.Repositories
 		#region Additional methods
 		public virtual bool checkDuplicateCode(string EntityCode)
 		{
-			var sqlCmd = $"SELECT {tableName}Code from {tableName} WHERE {tableName}Code = '@{tableName}Code'";
+			var sqlCmd = $"SELECT {tableName}ID from {tableName} WHERE {tableName}ID = '@{tableName}ID'";
 			var dparams = new DynamicParameters();
-			dparams.Add($"@{tableName}Code", EntityCode);
+			dparams.Add($"@{tableName}ID", EntityCode);
 			var duplicateCode = conn.QueryFirstOrDefault<string>(sqlCmd, dparams);
 			return (string.IsNullOrEmpty(duplicateCode));
 		}
